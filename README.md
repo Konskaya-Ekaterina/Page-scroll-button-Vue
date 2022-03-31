@@ -1,24 +1,11 @@
-# page-navigation-button
+# Компонент кнопки прокрутки страницы вверх и вниз на Vue
 
-## Project setup
-```
-npm install
-```
+В десктопной версии плавно меняется высота кнопки в зависимости от позиции скролла: в самом верху и в самом низу кнопка одинарная, в середине - двойная.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+###Реализовано двумя способами:
 
-### Compiles and minifies for production
-```
-npm run build
-```
+В десктопной версии через метод scrollTo().
 
-### Lints and fixes files
-```
-npm run lint
-```
+В мобильной версии через метод scrollIntoView() и якорные ссылки на вспомогательные элементы, которые должны располагаться в самом верху и в самом низу.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Второй метод позволяет реализовать плавную анимацию прокрутки, что неплохо смотрится при небольшом количестве контента.
